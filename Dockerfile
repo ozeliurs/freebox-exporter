@@ -6,5 +6,6 @@ COPY . /app
 RUN go build -o main .
 
 EXPOSE 9091
+VOLUME /app/creds
 
-CMD ["/app/main"]
+CMD ["/app/main", "/app/creds/creds.json"]
